@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img height="1000px" src="shoe.png" alt="">
+    </div>
+    <section></section>
+</body>
+</html>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    background-image: url('./background1.png');
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: back-color 10s infinite alternate-reverse;
+
+}
+section{
+    height:400px;
+    width:400px;
+    background: linear-gradient(tomato,blue,violet,teal);
+    border-radius: 50%;
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    animation: rotate infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+img{
+    height:75vh;
+    margin-right: 5rem;
+    animation: falling-down 4s infinite ease-out;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(300deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes floating {
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+@keyframes back-color{
+    0%{
+        background: #212121; 
+        background-image: url('./background2.png');
+    }
+    100%{
+        background: white; 
+        background-image:url('./background2.png'); 
+    }
+}
+@keyframes falling-down{
+    0%{
+        transform: translateY(-500%);
+    }
+    40%{
+        transform: translateY(0%);
+    }
+    60%{
+        transform: translateY(20px);
+    }
+    80%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+</style>
